@@ -93,13 +93,10 @@ class ejercicioformulario:
             if eed.get()==3:
                 ocupacion = 'Desempleado'
 
-            if nombre.get()==None:
-                print("debes ingresar un nombre")
                     
             Formulariodb = [(nombre.get(),apaterno.get(),amaterno.get(),correo.get(),movil.get(),l,m,v,ocupacion)]
             c.executemany('INSERT INTO registro VALUES (?,?,?,?,?,?,?,?,?)', Formulariodb)
             conexion.commit()
-            #conexion.close()
         
         def delete_window():
             conexion.close()
